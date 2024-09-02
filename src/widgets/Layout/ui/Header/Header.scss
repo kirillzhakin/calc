@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 100px;
+  padding: 20px;
+  border-bottom: 1px solid rgba(38, 38, 38, 0.24);
+  align-items: center;
+}
+.header__navigate {
+  display: grid;
+  grid-template-columns: 200px 250px;
+  gap: 20px;
+}
+.header__dropdown {
+  max-width: 200px;
+}
+
+.header__currecy {
+  display: flex;
+  gap: 20px;
+  min-width: 400px;
+  align-items: center;
+  justify-content: flex-end;
+}
