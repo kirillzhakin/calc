@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 import { MainPage } from '@/pages'
 import { ROUTE_NAME } from '@/widgets'
-const ConvertPage = () => import('@/pages/ConvertPage/ui/ConvertPage.vue')
+const ResultPage = () => import('@/pages/ResultPage/ui/ResultPage.vue')
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -10,9 +10,9 @@ const routes: Array<RouteRecordRaw> = [
     component: MainPage
   },
   {
-    path: '/convert',
-    name: ROUTE_NAME.CONVERT,
-    component: ConvertPage
+    path: '/result',
+    name: ROUTE_NAME.RESULT,
+    component: ResultPage
   }
 ]
 

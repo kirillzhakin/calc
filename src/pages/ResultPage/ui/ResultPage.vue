@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { PayForm } from '@/widgets'
+import { ResultData } from '@/widgets'
 </script>
 <template>
   <main>
-    <PayForm />
+    <ResultData />
   </main>
 </template>
 <style lang="scss" scoped>
-@use './MainPage.scss';
+@use './ResultPage.scss';
 </style>

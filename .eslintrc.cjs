@@ -16,7 +16,7 @@ module.exports = {
     'vue/multi-word-component-names': [
       'error',
       {
-        ignores: ['Header', 'Footer', 'Button', 'Input', 'Dropdown', 'Loader']
+        ignores: ['Header', 'Footer', 'Button', 'Input', 'Loader']
       }
     ]
   }

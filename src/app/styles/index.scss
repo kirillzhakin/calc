@@ -1,14 +1,14 @@
-@import './normalize.scss';
-@import '@fontsource/roboto';
-
-* {
-  font-weight: 400;
-}
+@use './normalize.scss';
+@use '@fontsource/inter';
 
 body {
   display: flex;
   flex-direction: column;
   height: 100%;
+  font-family: "Inter";
   font-size: 16px;
-  color: #22202e;
+  line-height: 20px;
+  font-weight: 400;
+  color: #22252B;
+  background-color: #f5f5f6;
 }

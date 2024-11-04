@@ -16,12 +16,9 @@ interface LoaderProps {
   message?: string
 }
 
-withDefaults(defineProps<LoaderProps>(), {
-  active: false,
-  message: ' Загрузка данных...'
-})
+const { active = false, message = ' Загрузка данных...' } = defineProps<LoaderProps>()
 </script>
 
 <style lang="scss" scoped>
-@import './Loader.scss';
+@use './Loader.scss';
 </style>

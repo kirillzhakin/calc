@@ -1,42 +1,28 @@
 <script setup lang="ts">
-import { TYPE_BUTTON } from './Button.const'
+import { type ButtonProps } from './Button.types'
+import { SIZES, THEME_VARIANTS } from '@/shared'
 
-interface ButtonProps {
-  color?: string
-  background?: string
-  padding?: string
-  height?: string
-  type?: string
-  to?: string
-  isActive?: boolean
-}
-withDefaults(defineProps<ButtonProps>(), {
-  type: TYPE_BUTTON.BUTTON,
-  to: '/',
-  isActive: false,
-  height: '49px'
-})
+const {
+  size = SIZES.NORMAL,
+  theme = THEME_VARIANTS.PRIMARY,
+  disabled = false
+} = defineProps<ButtonProps>()
 </script>
 <template>
   <button
-    v-if="type === TYPE_BUTTON.BUTTON"
     class="button"
-    :class="{ button_active: isActive }"
+    :class="{
+      [`button_${theme}`]: theme,
+      [`button_${size}`]: size,
+      button_disabled: disabled
+    }"
     :style="{ background, color, padding, height }"
+    :disabled="disabled"
   >
     <slot></slot>
   </button>
-  <router-link
-    v-else
-    :to="to"
-    class="button"
-    :class="{ button_active: isActive }"
-    :style="{ background, color, padding, height }"
-  >
-    <slot></slot>
-  </router-link>
 </template>
 
 <style lang="scss" scoped>
-@import './Button.scss';
+@use './Button.scss';
 </style>

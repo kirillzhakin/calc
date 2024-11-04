@@ -7,5 +7,5 @@ import { MainLayout } from '@/widgets';
 </template>
 
 <style lang="scss">
-	@import './app/styles/index.scss';
+	@use './app/styles/index.scss';
 </style>

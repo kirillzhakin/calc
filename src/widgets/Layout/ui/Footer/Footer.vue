@@ -8,5 +8,5 @@ const getCurrentYear = () => new Date().getFullYear()
 </template>
 
 <style lang="scss" scoped>
-@import './Footer.scss';
+@use './Footer.scss';
 </style>
