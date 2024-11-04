@@ -1,4 +1,4 @@
 export const THEME_VARIANTS = {
-	PRIMARY: "primary",
-	SECONDARY: "secondary",
-};
+  PRIMARY: 'primary',
+  SECONDARY: 'secondary'
+}

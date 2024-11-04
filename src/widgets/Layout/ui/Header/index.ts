@@ -1,2 +1,2 @@
-export { default as Header } from './Header.vue';
-export *from './Header.const'
+export * from './Header.const'
+export { default as Header } from './Header.vue'

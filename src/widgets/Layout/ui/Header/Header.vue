@@ -4,7 +4,7 @@ import { RouterLink } from 'vue-router'
 </script>
 <template>
   <header class="header">
-    <nav >
+    <nav>
       <ul class="header__list-nav">
         <li>
           <RouterLink class="header__title" to="/" activeClass="header__title_active"

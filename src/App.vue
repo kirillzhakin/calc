@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { MainLayout } from '@/widgets';
+import { MainLayout } from '@/widgets'
 </script>
 
 <template>
@@ -7,5 +7,5 @@ import { MainLayout } from '@/widgets';
 </template>
 
 <style lang="scss">
-	@use './app/styles/index.scss';
+@use './app/styles/index.scss';
 </style>

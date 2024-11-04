@@ -1,1 +1,1 @@
-export { default as ResultPage } from './ResultPage.vue';
+export { default as ResultPage } from './ResultPage.vue'

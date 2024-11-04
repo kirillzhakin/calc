@@ -1,1 +1,1 @@
-export { default as ResultData } from './ResultData.vue';
+export { default as ResultData } from './ResultData.vue'

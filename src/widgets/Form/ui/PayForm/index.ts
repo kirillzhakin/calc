@@ -1,1 +1,1 @@
-export { default as PayForm } from './PayForm.vue';
+export { default as PayForm } from './PayForm.vue'
