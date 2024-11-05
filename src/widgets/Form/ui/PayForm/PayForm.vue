@@ -67,10 +67,6 @@ const validateRules = {
 }
 const validate = useVuelidate(validateRules, inputValue)
 
-const transformToUpper = (): void => {
-  inputValue.name = inputValue.name.toUpperCase()
-}
-
 const checkValidation = (): void => {
   Object.keys(validateRules).forEach((field) => {
     validate.value[field].$touch()
@@ -92,6 +88,9 @@ const optionsAmount = reactive<MaskInputOptions>({
     unsigned: true
   }
 })
+const optionsName = reactive<MaskInputOptions>({
+  postProcess: (value: string) => (value ? value.toUpperCase() : '')
+})
 
 const submitPayment = async (): Promise<void> => {
   checkValidation()
@@ -109,8 +108,9 @@ const submitPayment = async (): Promise<void> => {
       description: `Оплата для ${initiatorName}`,
       api_key: API_KEY,
       amount: inputValue.amount,
-      email: '',
+      name: inputValue.name,
       message: inputValue.message,
+      email: '',
       custom_data: {
         initiatorName,
         collectionTitle
@@ -184,7 +184,7 @@ const submitPayment = async (): Promise<void> => {
       :id="INPUT_LABEL.YOUR_NAME"
       :label="INPUT_LABEL.YOUR_NAME"
       class="pay-form__input"
-      @input="transformToUpper"
+      :maska="optionsName"
       :errors="validate.name.$errors"
       @blur="validate.name.$touch()"
       @focus="validate.name.$reset()"
