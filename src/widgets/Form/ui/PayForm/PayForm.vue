@@ -133,7 +133,7 @@ const submitPayment = async (): Promise<void> => {
 </script>
 <template>
   <Loader v-if="isLoading" :active="isLoading" :message="'Отправка данных...'" />
-  <div v-else class="pay-form">
+  <form v-else class="pay-form">
     <h3 class="pay-form__title">{{ initiatorName }} собирает на «{{ collectionTitle }}» </h3>
     <Input
       v-model="inputValue.cardNumber"
@@ -199,7 +199,7 @@ const submitPayment = async (): Promise<void> => {
       <Button @click="submitPayment">Перевести</Button>
       <Button :theme="THEME_VARIANTS.SECONDARY">Вернуться</Button>
     </div>
-  </div>
+  </form>
 </template>
 
 <style lang="scss" scoped>
