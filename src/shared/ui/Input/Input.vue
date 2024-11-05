@@ -49,6 +49,7 @@ const errorMessage = computed(() => {
         :maxlength="maxlength"
         v-model="modelValue"
         v-maska="maska"
+        :autocomplete="autocomplete"
         class="text-field__input"
         :class="{
           'text-field_error': isError

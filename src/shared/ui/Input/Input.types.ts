@@ -12,4 +12,5 @@ export interface InputProps {
   errors?: ValidationError[]
   maxlength?: number
   maska?: string | MaskInputOptions
+  autocomplete?: string
 }

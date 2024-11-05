@@ -162,6 +162,7 @@ const submitPayment = async (): Promise<void> => {
         :label="INPUT_LABEL.CVV"
         :maska="INPUT_MASKA.CVV"
         :type="TYPE_INPUT.PASSWORD"
+        :autocomplete="'cc-csc'"
         :errors="validate.cvv.$errors"
         @blur="validate.cvv.$touch()"
         @focus="validate.cvv.$reset()"
@@ -196,7 +197,7 @@ const submitPayment = async (): Promise<void> => {
       class="pay-form__input"
     />
     <div class="pay-form__btns">
-      <Button @click="submitPayment">Перевести</Button>
+      <Button @click.prevent="submitPayment">Перевести</Button>
       <Button :theme="THEME_VARIANTS.SECONDARY">Вернуться</Button>
     </div>
   </form>
